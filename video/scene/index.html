@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BreakDown scene</title>
+<style>
+  @font-face { font-family: "Barlow SC"; font-weight: 600; src: url(/node_modules/@fontsource/barlow-semi-condensed/files/barlow-semi-condensed-latin-600-normal.woff2); }
+  @font-face { font-family: "Barlow SC"; font-weight: 700; src: url(/node_modules/@fontsource/barlow-semi-condensed/files/barlow-semi-condensed-latin-700-normal.woff2); }
+  @font-face { font-family: "Barlow SC"; font-weight: 800; src: url(/node_modules/@fontsource/barlow-semi-condensed/files/barlow-semi-condensed-latin-800-normal.woff2); }
+  html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #000; font-family: "Barlow SC", sans-serif; }
+  canvas { position: absolute; inset: 0; width: 1080px; height: 1920px; }
+  #fx { position: absolute; inset: 0; pointer-events: none;
+        background: radial-gradient(ellipse 85% 70% at 50% 48%, transparent 55%, rgba(0,0,0,.42) 100%); }
+  #flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+  #mark { position: absolute; left: 34px; top: 230px; display: flex; align-items: center; gap: 12px;
+          color: rgba(255,255,255,.62); font-weight: 700; font-size: 38px; letter-spacing: .5px;
+          text-shadow: 0 2px 6px rgba(0,0,0,.35); }
+  #mark i { width: 30px; height: 30px; border: 6px solid rgba(255,255,255,.62); transform: rotate(45deg);
+            border-radius: 5px; box-sizing: border-box; display: block; }
+  #caption { position: absolute; left: 60px; right: 60px; top: 1170px; text-align: center; }
+  #caption span { display: inline-block; color: #fff; font-weight: 800; font-size: 86px; line-height: 1.05;
+                  padding: 18px 40px; border-radius: 60px; letter-spacing: .5px;
+                  background: radial-gradient(ellipse at center, rgba(10,10,20,.48) 0%, rgba(10,10,20,.22) 55%, transparent 75%);
+                  text-shadow: 0 3px 10px rgba(0,0,0,.65), 0 0 2px rgba(0,0,0,.8); }
+  .card { position: absolute; left: 0; background: rgba(12,12,16,.82); border-left: 9px solid #fff;
+          padding: 16px 30px 18px 26px; color: #fff; border-radius: 0 10px 10px 0;
+          box-shadow: 0 6px 24px rgba(0,0,0,.35); }
+  #card { top: 330px; }
+  #card b { display: block; font-size: 58px; font-weight: 700; line-height: 1.1; }
+  #card small { display: block; font-size: 40px; font-weight: 600; opacity: .88; line-height: 1.2; }
+  #tag { top: 1010px; font-size: 42px; font-weight: 700; padding: 10px 24px 12px 20px; border-left-width: 7px; }
+  #end { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+         color: #fff; opacity: 0; padding-bottom: 380px; }
+  #end h1 { margin: 0; font-size: 150px; font-weight: 800; letter-spacing: 4px; line-height: .95;
+            text-shadow: 0 6px 30px rgba(0,0,0,.6); text-align: center; }
+  #end h2 { margin: 18px 0 0; font-size: 48px; font-weight: 600; opacity: .85; letter-spacing: 6px; }
+  #end .line { width: 0; height: 6px; background: #ff9a3c; margin-top: 26px; }
+</style>
+<script type="importmap">{ "imports": { "three": "/node_modules/three/build/three.module.js" } }</script>
+</head>
+<body>
+  <div id="fx"></div>
+  <div id="flash"></div>
+  <div id="mark"><i></i><span id="markText">BreakDown</span></div>
+  <div class="card" id="card" style="display:none"><b></b><small></small></div>
+  <div class="card" id="tag" style="display:none"></div>
+  <div id="end"><h1>X-68A<br>LONGSHOT</h1><div class="line"></div><h2>DARPA · GENERAL ATOMICS</h2></div>
+  <div id="caption"><span></span></div>
+  <script type="module" src="./scene.js"></script>
+</body>
+</html>

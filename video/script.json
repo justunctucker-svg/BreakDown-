@@ -1,0 +1,23 @@
+{
+  "title": "This Drone Fires Its Own Missiles",
+  "channel": "BreakDown",
+  "voice": { "model": "en-us-ryan-high", "lengthScale": 0.92, "gapAfter": 0.18 },
+  "lines": [
+    { "shot": "chase", "text": "A normal fighter has to fly close enough for the enemy to shoot back.", "tag": "Illustration" },
+    { "shot": "carry", "text": "So what if it never had to get close at all?" },
+    { "shot": "reveal", "text": "Meet the X-68A LongShot.",
+      "card": ["X-68A LongShot", "DARPA + General Atomics"], "tag": "Concept design · flight tests pending" },
+    { "shot": "carry2", "text": "An F-15 carries it under its wing, far from the fight.",
+      "card": ["Hosts: F-15E, F-15EX, B-52", "per GA-ASI, Feb 2026"] },
+    { "shot": "drop", "text": "Then it lets go, and the drone falls like a bomb." },
+    { "shot": "deploy", "text": "Its wings swing out. Its jet engine lights." },
+    { "shot": "cruise", "text": "And it flies ahead on its own, toward a fight the pilot never has to enter." },
+    { "shot": "belly", "text": "But the strangest part is what it keeps inside its belly.",
+      "card": ["AIM-120 AMRAAM", "air-to-air missiles, carried inside"] },
+    { "shot": "release", "text": "The doors open, the missiles drop clear, and their motors light." },
+    { "shot": "escape", "text": "Meanwhile the fighter that launched it turns for home, untouched.", "tag": "Illustration" },
+    { "shot": "outro", "text": "Wind tunnel testing is done. Flight testing could start as soon as late this year.",
+      "card": ["Status: pre-flight testing", "DARPA, 2026"] },
+    { "shot": "endcard", "text": "Follow for more machines that change the fight." }
+  ]
+}
